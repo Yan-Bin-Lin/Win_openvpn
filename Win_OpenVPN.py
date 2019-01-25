@@ -42,14 +42,3 @@ class OpenVPN():
         os.system('taskkill /F /IM  openvpn.exe')
         #delete the thread
         del self.ConnectList[0]
-
-        
-O = OpenVPN()
-print(O.ovpn)
-O.connect(2)
-print('connect success')
-import time
-time.sleep(10)
-O.disconnect()
-time.sleep(10)
-O.connect()
